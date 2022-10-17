@@ -22,13 +22,4 @@ export class SignupService {
 
     return this.http.post(this.api, dados, httpOptions);
   }
-
-  listar(email:any){
-    
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Acess-Control-Allow-Origin' : '*'})
-    };
-    return this.http.get(this.api + '/' + email, email);
-  }
 }

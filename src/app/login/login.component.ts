@@ -22,11 +22,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  fazerlogin(){
-    //console.log(this.usuario);
-    //this.authService.fazerLogin(this.usuario);
-    this.signup_service.listar(this.usuario.email).toPromise();
-    //console.log(['localhost:8080/api/users/' + this.usuario.email]);
-  }
+  
 
 }
