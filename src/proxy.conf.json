@@ -1,0 +1,10 @@
+{
+    "/signup/*":{
+        "target": "http://localhost:8080/api/users",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {"^/api/*":""}
+    }
+
+}
