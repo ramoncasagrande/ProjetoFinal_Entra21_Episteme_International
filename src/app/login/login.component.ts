@@ -21,7 +21,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  login(){
+    this.authentication_service
+      .login(this.usuario.email, this.usuario.password)
+      .subscribe((res:any) => {});
+  }
 
   
 
