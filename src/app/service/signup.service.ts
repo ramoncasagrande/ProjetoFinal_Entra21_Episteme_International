@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Usuario } from '../login/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,12 @@ export class SignupService {
     return this.http.post(this.api, dados, httpOptions);
   }
 
-  listar(){
-    return this.http.get
+  listar(email:any){
+    
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Acess-Control-Allow-Origin' : '*'})
+    };
+    return this.http.get(this.api + '/' + email, email);
   }
 }
