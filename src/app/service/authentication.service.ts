@@ -40,7 +40,7 @@ export class AuthenticationService {
     
     let is_auth = JSON.parse(String(localStorage.getItem('is_auth')));
     if (is_auth){
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/contato']);
       return true;
     }else{
       this.router.navigate(['/login']);

@@ -27,6 +27,8 @@ import { NegociosComponent } from './negocios/negocios.component';
 import { SaibamaisComponent } from './saibamais/saibamais.component';
 import { AuthService } from './login/auth.service';
 import { SucessoUsuarioComponent } from './sucesso-usuario/sucesso-usuario.component';
+import { SuccessLoginComponent } from './messages/success-login/success-login.component';
+import { ErrorComponent } from './messages/error/error.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { SucessoUsuarioComponent } from './sucesso-usuario/sucesso-usuario.compo
     NegociosComponent,
     SaibamaisComponent,
     SucessoUsuarioComponent,
+    SuccessLoginComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import { Usuario } from './usuario';
   providedIn: 'root'
 })
 export class AuthService {
-
+/*
   private usuarioAutenticado:boolean = false;
 
   mostrarMenuEmitter = new EventEmitter<boolean>();
@@ -26,5 +26,5 @@ export class AuthService {
     } else{
       this.usuarioAutenticado = false;
     }
-  }
+  }*/
 }
