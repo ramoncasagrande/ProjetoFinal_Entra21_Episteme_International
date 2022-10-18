@@ -14,40 +14,34 @@
         </section>
         <!--Carousel-->
         <div class="container">
-            <!--padrão da biblioteca glidejs-->
-            <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide"><img src="/assets/imagens/slider1.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="/assets/imagens/slider2.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="/assets/imagens/slider3.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="/assets/imagens/slider4.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="/assets/imagens/slider5.jpg" alt=""></li>
-                        <li class="glide__slide"><img src="/assets/imagens/slider6.jpg" alt=""></li>
-                    </ul>
-                </div>
-                <!--setas-->
-                <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
-                </div>
+
+            <!--<ng-image-slider [images]="imgCollection" #nav></ng-image-slider> -->
+            <div>
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide>
+                        <img src="../../assets/imagens/slider1.jpg" alt="">
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <img src="../../assets/imagens/slider2.jpg" alt="">
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <img src="../../assets/imagens/slider3.jpg" alt="">
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <img src="../../assets/imagens/slider4.jpg" alt="">
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <img src="../../assets/imagens/slider5.jpg" alt="">
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <img src="../../assets/imagens/slider6.jpg" alt="">
+                    </ng-template>
+                </owl-carousel-o>
             </div>
+
+
         </div>
     </main>
-    <!--link da biblioteca glidejs-->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <!--script para configurar o carousel-->
-    <script>
-        const config = {
-            type: 'carousel',
-            perView: 2,
-            breakpoints: {
-                800: {
-                    perView: 1
-                }
-            }
-        };
-        new Glide('.glide', config).mount()
-    </script>
-    </body>
-    
+
+
+</body>

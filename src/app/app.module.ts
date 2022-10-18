@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatGridListModule} from '@angular/material/grid-list';
-
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +29,8 @@ import { SucessoUsuarioComponent } from './sucesso-usuario/sucesso-usuario.compo
 import { SuccessLoginComponent } from './messages/success-login/success-login.component';
 import { ErrorComponent } from './messages/error/error.component';
 import { ErrorSignupComponent } from './messages/error-signup/error-signup.component';
+
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 @NgModule({
@@ -63,6 +64,8 @@ import { ErrorSignupComponent } from './messages/error-signup/error-signup.compo
     MatGridListModule,
     FormsModule,
     HttpClientModule,
+    NgImageSliderModule,
+    CarouselModule
 
   
   ],
