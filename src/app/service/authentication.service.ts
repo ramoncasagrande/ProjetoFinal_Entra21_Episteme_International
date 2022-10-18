@@ -30,5 +30,9 @@ export class AuthenticationService {
     );
   }
 
+  autenticar(){
+    localStorage.setItem('is_auth','true');
+  }
+
 
 }

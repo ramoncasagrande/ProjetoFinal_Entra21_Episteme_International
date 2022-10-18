@@ -24,7 +24,26 @@ export class LoginComponent implements OnInit {
   login(){
     this.authentication_service
       .login(this.usuario.email, this.usuario.password)
-      .subscribe((res:any) => {});
+      .subscribe((res:any) => {
+        this.autenticar(res)
+      });
+  }
+
+  autenticar(is_auth:boolean){
+    if (is_auth) {
+      this.authentication_service.autenticar();
+      this.success();
+    }else{
+      this.error();
+    }
+  }
+
+  success(){
+
+  }
+
+  error(){
+    
   }
 
   
