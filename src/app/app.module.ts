@@ -29,6 +29,7 @@ import { AuthService } from './login/auth.service';
 import { SucessoUsuarioComponent } from './sucesso-usuario/sucesso-usuario.component';
 import { SuccessLoginComponent } from './messages/success-login/success-login.component';
 import { ErrorComponent } from './messages/error/error.component';
+import { ErrorSignupComponent } from './messages/error-signup/error-signup.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { ErrorComponent } from './messages/error/error.component';
     SucessoUsuarioComponent,
     SuccessLoginComponent,
     ErrorComponent,
+    ErrorSignupComponent,
   ],
   imports: [
     BrowserModule,

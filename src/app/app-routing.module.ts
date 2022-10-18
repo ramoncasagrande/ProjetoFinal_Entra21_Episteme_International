@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ErrorSignupComponent } from './messages/error-signup/error-signup.component';
 import { ErrorComponent } from './messages/error/error.component';
 import { SuccessLoginComponent } from './messages/success-login/success-login.component';
 import { NegociosComponent } from './negocios/negocios.component';
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path: "saibamais", component:SaibamaisComponent},
   {path: "sucesso-usuario", component:SucessoUsuarioComponent},
   {path: "error", component:ErrorComponent},
-  {path: "success-login", component:SuccessLoginComponent}
+  {path: "success-login", component:SuccessLoginComponent},
+  {path: "error-signup", component:ErrorSignupComponent}
   
 ];
 
