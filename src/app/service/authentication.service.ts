@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -33,6 +33,20 @@ export class AuthenticationService {
   autenticar(){
     localStorage.setItem('is_auth','true');
   }
+
+  canActivate(
+    route: ActivatedRouteSnapshot, 
+    state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
+    
+    let is_auth = JSON.parse(String(localStorage.getItem('is_auth')));
+    if (is_auth){
+      this.router.navigate(['/dashboard']);
+      return true;
+    }else{
+      this.router.navigate(['/login']);
+      return false;
+    }
+  }  
 
 
 }
