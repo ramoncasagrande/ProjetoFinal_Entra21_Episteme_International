@@ -1,12 +1,12 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService {
+export class AuthenticationService implements CanActivate {
 
   constructor(
     public http:HttpClient,
@@ -40,10 +40,10 @@ export class AuthenticationService {
     
     let is_auth = JSON.parse(String(localStorage.getItem('is_auth')));
     if (is_auth){
-      this.router.navigate(['/contato']);
+      this.router.navigate(['/cursosonline']);
       return true;
     }else{
-      this.router.navigate(['/login']);
+      this.router.navigate(['/error']);
       return false;
     }
   }  
