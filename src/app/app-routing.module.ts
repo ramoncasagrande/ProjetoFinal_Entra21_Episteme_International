@@ -38,7 +38,7 @@ const routes: Routes = [
   {path: "saibamais", component:SaibamaisComponent},
   {path: "sucesso-usuario", component:SucessoUsuarioComponent},
   {path: "error", component:ErrorComponent},
-  {path: "success-Login", component:SuccessLoginComponent}
+  {path: "success-login", component:SuccessLoginComponent}
   
 ];
 

@@ -39,11 +39,11 @@ export class LoginComponent implements OnInit {
   }
 
   success(){
-
+    this.router.navigate(['/success-login']);
   }
 
   error(){
-    this.router.navigate(['/sucesso-usuario']);
+    this.router.navigate(['/error']);
   }
 
   
