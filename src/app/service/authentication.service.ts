@@ -39,13 +39,13 @@ export class AuthenticationService implements CanActivate {
     state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
     
     let is_auth = JSON.parse(String(localStorage.getItem('is_auth')));
-    if (is_auth){
-      this.router.navigate(['/cursosonline']);
-      return true;
-    }else{
-      this.router.navigate(['/error']);
+    if (!is_auth){
+      this.router.navigate(['/login']);
       return false;
     }
+      
+      return true;
+    
   }  
 
 

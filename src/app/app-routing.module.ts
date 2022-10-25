@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: "orientacao", component:OrientacaoComponent},
   {path: "quemsomos", component:QuemsomosComponent},
   {path: "login", component:LoginComponent},
-  {path: "cursosonline", component: CursosonlineComponent},
+  {path: "cursosonline", component: CursosonlineComponent, canActivate:[AuthenticationService] },
   {path: "signup", component: SignupComponent},
   {path: "resetsenha", component:ResetsenhaComponent},
   {path: "parcerias", component:ParceriasComponent},
